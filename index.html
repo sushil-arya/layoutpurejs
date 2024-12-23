@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pure Js Website</title>
+        
+    </head>
+
+    <body>
+
+
+        <script>
+            
+        //1. Create an Element/Tag
+        var h = document.createElement('header');
+
+        //1.1 adding content to the <header> element
+        h.innerHTML = 'Header';
+        
+        //2. place the created Elements/tags inside the body
+
+        //2.1 providing body tag an arribute with the help of querySelector
+        
+        document.querySelector('body').setAttribute('id', 's_body');
+        
+        //2.1.1 then placing the header child element inside the body 
+        document.getElementById('s_body').appendChild(h);
+
+        //3. Find the element by query selector and set the attributes
+        document.querySelector('header').setAttribute('class', 's_header');
+
+        // document.querySelector('body').style.margin = '0px';
+
+        document.body.style.margin = '0px';
+        document.body.style.fontFamily = 'Arial';
+        document.body.style.boxSizing = 'border-box';
+
+        //Styling the header element by getElementsByClassName will give collection means an Array
+
+        let class_header = document.getElementsByClassName('s_header');
+
+        class_header[0].style.color = 'green';
+        class_header[0].style.border = '2px solid gray';
+        class_header[0].style.width = '100%';
+        class_header[0].style.height = '150px';
+        class_header[0].style.padding = '10px';
+
+
+        //Styling the header element by getElementsByTagName will give collection means an Array
+        var tag_header = document.getElementsByTagName('header');
+
+        tag_header[0].style.color = 'green';
+        tag_header[0].style.fontSize = '3em';
+        
+        tag_header[0].style.textAlign = 'center';      
+        tag_header[0].style.lineHeight = '150px';
+
+
+        let f = document.createElement('footer');
+
+        f.innerHTML = 'Footer';
+
+        let n = document.createElement('nav');
+
+        n.innerHTML = 'Nav';
+        
+        
+        var aside1 = document.createElement('aside');
+        var section_n = document.createElement('section');
+        var aside2 = document.createElement('aside');
+
+        aside1.innerHTML='asideLeft';
+        section_n.innerHTML='section';
+        aside2.innerHTML='asideRight';
+
+        document.body.appendChild(n);
+        document.body.appendChild(aside1);
+        document.body.appendChild(section_n);
+        document.body.appendChild(aside2);
+        document.body.appendChild(f);
+
+        // document.querySelectorAll('aside').style.display='inline-block';
+        
+        var aside_both = document.querySelectorAll('aside');
+
+        aside_both.forEach((element) => {
+            element.style.display='inline-block';
+        })
+
+        aside_both.forEach((element) => {
+            element.style.border = '2px solid gray';
+            element.style.height = '600px';
+            element.style.color = 'green';
+            element.style.width = '25%';
+            element.style.textAlign = 'center';
+            element.style.lineHeight = '600px';
+            element.style.fontSize = '2em';
+
+        });
+
+
+        section_n.style.width ='49%';
+        section_n.style.fontSize = '2em';
+        section_n.style.color = 'green';
+        section_n.style.border = '2px solid gray';
+        section_n.style.height ='600px';
+        
+        section_n.style.textAlign = 'center'; 
+        section_n.style.lineHeight = '600px';
+    
+
+
+        document.querySelector('nav').setAttribute('class', 's_nav');
+
+        let class_nav = document.getElementsByClassName('s_nav');
+
+        class_nav[0].style.color = 'green';
+        class_nav[0].style.border = '2px solid gray';
+        class_nav[0].style.width = '100%';  
+        class_nav[0].style.height = '150px';
+        class_nav[0].style.lineHeight = '150px';
+        class_nav[0].style.border = '2px solid gray';
+        class_nav[0].style.fontSize = '3em';
+        class_nav[0].style.textAlign = 'center';
+
+
+
+        /*
+        document.querySelectorAll('aside').forEach((iterator) => {
+            iterator.style.display='inline-block'
+        })
+        */
+    
+        document.querySelector('section').style.display='inline-block';
+
+        let tag_footer = document.querySelectorAll('footer');
+
+        tag_footer[0].setAttribute('data-foot', 'foot');
+
+        document.querySelector('footer[data-foot = "foot"]').style.textAlign = 'center';
+
+        document.querySelector("[data-foot = 'foot']").style.color = 'green';
+        tag_footer[0].style.fontSize = '3em';
+        tag_footer[0].style.lineHeight = '150px';
+        tag_footer[0].style.border = '2px solid gray';
+        tag_footer[0].style.width = '100%';
+
+
+        
+        
+        //testing
+        //console.log(x2[0]);
+
+        /*
+
+        document.querySelector('footer').setAttribute('class', 's_footer');
+
+        let class_footer = document.getElementsByClassName('s_footer');
+
+        class_footer[0].style.color = 'green';
+        class_footer[0].style.border = '2px solid gray';
+        class_footer[0].style.width = '100%';
+        class_footer[0].style.height = '150px';
+        class_footer[0].style.padding = '10px';
+
+
+        let tag_footer = document.getElementsByTagName('footer');
+
+        tag_footer[0].style.color = 'green';
+        tag_footer[0].style.fontSize = '3em';
+        tag_footer[0].style.fontFamily = 'Arial';
+        tag_footer[0].style.textAlign = 'center';      
+        tag_footer[0].style.lineHeight = '150px';
+
+        */
+
+    
+    
+        </script>
+    </body>
+
+</html>
